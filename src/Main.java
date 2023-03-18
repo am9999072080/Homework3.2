@@ -91,5 +91,5 @@ public class Main {
             default:
                 System.out.println("Некоректный ввод");
         }
-        }
     }
+}
