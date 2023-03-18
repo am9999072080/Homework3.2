@@ -9,28 +9,30 @@ public class Main {
 
     public static void task1() {
         System.out.println("Задача-1");
-        int OperationSystem = 0;
-        if (OperationSystem == 0) {
-            System.out.println("Для iOS — «Установите версию приложения для iOS по ссылке");
-        }
-        if (OperationSystem == 1) {
-            System.out.println("Для Android — «Установите версию приложения для Android по ссылке");
+        int operationSystem = 0;
+        if (operationSystem == 0) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        } else {
+            System.out.println("Установите версию приложения для Android по ссылке");
         }
     }
 
     public static void task2() {
         System.out.println("Задача-2");
-        int OperationSystem = 0;
+        int operationSystem = 0;
         int releaseOfThePhone = 2014;
-        if (OperationSystem == 0) {
-            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-            if (OperationSystem == 1) {
-                System.out.println("Установите версию приложения для Android по ссылке");
+        if (operationSystem == 0) {
+            if (operationSystem == 0) {
+                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+            } else {
+                System.out.println("Установите версию приложения для iOS по ссылке");
             }
-            if (releaseOfThePhone < 2015) {
-                System.out.println("Для пользователей телефонов позже 2015 года выпуска и нужно вывести обычное предложение об установке приложения");
-                if (releaseOfThePhone == 2015) {
-                    System.out.println("Для года создания телефона используйте переменную clientDeviceYear, в которой необходимо указать 2015 год");
+        } else {
+            if (operationSystem == 1) {
+                if (operationSystem == 1) {
+                    System.out.println("Установите облегченную версию приложения для Android по ссылке");
+                } else {
+                    System.out.println("Установите версию приложения для Android по ссылке");
                 }
             }
         }
@@ -49,15 +51,14 @@ public class Main {
 
     public static void task4() {
         System.out.println("Задача-4");
-        int deliveryDistance = 95;
-        if (deliveryDistance <= 20) {
-            System.out.println("Потребуется дней: " + deliveryDistance + " срок доставки");
+        int deliveryDistance = 100;
+        int deliveryDays = 1;
+        if (deliveryDistance > 20) {
+            deliveryDays++;
         }
-        if (20 < deliveryDistance && deliveryDistance < 60) {
-            System.out.println("Потребуется дней: " + deliveryDistance + " срок доставки");
-        }
-        if (60 <= deliveryDistance && deliveryDistance < 1000) {
-            System.out.println("Потребуется дней: " + deliveryDistance + " срок доставки");
+        if (deliveryDistance > 60) {
+            deliveryDays++;
+            System.out.println("Для доставки потребуется дней:  " + deliveryDays);
         } else {
             System.out.println("Свыше 100 км доставки нет");
         }
@@ -65,49 +66,30 @@ public class Main {
 
     public static void task5() {
         System.out.println("Задача-5");
-        int monthNumber = 2;
+        int monthNumber = 3;
         switch (monthNumber) {
+            case 12:
             case 1:
-                System.out.println(monthNumber + "-й месяц принадлежит к сезону зима");
-                break;
             case 2:
                 System.out.println(monthNumber + "-й месяц принадлежит к сезону зима");
                 break;
             case 3:
-                System.out.println(monthNumber + "-й месяц принадлежит к сезону весна");
-                break;
             case 4:
-                System.out.println(monthNumber + "-й месяц принадлежит к сезону весна");
-                break;
             case 5:
                 System.out.println(monthNumber + "-й месяц принадлежит к сезону весна");
                 break;
             case 6:
-                System.out.println(monthNumber + "-й месяц принадлежит к сезону лето");
-                break;
             case 7:
-                System.out.println(monthNumber + "-й месяц принадлежит к сезону лето");
-                break;
             case 8:
                 System.out.println(monthNumber + "-й месяц принадлежит к сезону лето");
                 break;
             case 9:
-                System.out.println(monthNumber + "-й месяц принадлежит к сезону осень");
-                break;
             case 10:
-                System.out.println(monthNumber + "-й месяц принадлежит к сезону осень");
-                break;
             case 11:
                 System.out.println(monthNumber + "-й месяц принадлежит к сезону осень");
                 break;
-            case 12:
-                System.out.println(monthNumber + "-й месяц принадлежит к сезону зима");
-
-                break;
             default:
-                if (monthNumber > 12) {
-                    System.out.println(monthNumber + "-ого месяца нету в году");
-                }
+                System.out.println("Некоректный ввод");
         }
     }
 }
